@@ -1,0 +1,45 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "simple-string-provider-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/simpleStringProvider/SimpleStringProviderWebPart.js",
+          "manifest": "./src/webparts/simpleStringProvider/SimpleStringProviderWebPart.manifest.json"
+        }
+      ]
+    },
+    "simple-string-viewer-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/simpleStringViewer/SimpleStringViewerWebPart.js",
+          "manifest": "./src/webparts/simpleStringViewer/SimpleStringViewerWebPart.manifest.json"
+        }
+      ]
+    },
+    "simple-object-provider-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/simpleObjectProvider/SimpleObjectProviderWebPart.js",
+          "manifest": "./src/webparts/simpleObjectProvider/SimpleObjectProviderWebPart.manifest.json"
+        }
+      ]
+    },
+    "custom-object-viewer-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/customObjectViewer/CustomObjectViewerWebPart.js",
+          "manifest": "./src/webparts/customObjectViewer/CustomObjectViewerWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SimpleStringProviderWebPartStrings": "lib/webparts/simpleStringProvider/loc/{locale}.js",
+    "SimpleStringViewerWebPartStrings": "lib/webparts/simpleStringViewer/loc/{locale}.js",
+    "SimpleObjectProviderWebPartStrings": "lib/webparts/simpleObjectProvider/loc/{locale}.js",
+    "CustomObjectViewerWebPartStrings": "lib/webparts/customObjectViewer/loc/{locale}.js"
+  }
+}

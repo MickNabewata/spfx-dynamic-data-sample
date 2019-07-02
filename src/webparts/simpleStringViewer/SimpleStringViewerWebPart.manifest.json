@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "1ae89da4-0ccb-455e-8c2b-f67c4cae8956",
+  "alias": "SimpleStringViewerWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart"],
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+    "group": { "default": "Other" },
+    "title": { "default": "SimpleStringViewer" },
+    "description": { "default": "文字列型の動的データを表示するシンプルなWebパーツです。" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+    }
+  }]
+}

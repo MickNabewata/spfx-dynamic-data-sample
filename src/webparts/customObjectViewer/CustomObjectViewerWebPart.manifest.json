@@ -1,0 +1,21 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "7ae54b8a-b3c0-458d-ae23-b3d6546b8fa9",
+  "alias": "CustomObjectViewerWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart"],
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+    "group": { "default": "Other" },
+    "title": { "default": "CustomObjectViewer" },
+    "description": { "default": "動的データのプロパティを手動で読み込むWebパーツです。" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "dynamicDataSource": "",
+      "dynamicDataProperty": ""
+    }
+  }]
+}

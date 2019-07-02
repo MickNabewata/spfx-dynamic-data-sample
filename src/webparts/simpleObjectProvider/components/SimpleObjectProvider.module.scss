@@ -1,0 +1,16 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.simpleObjectProvider {
+
+  .fieldArea {
+    overflow: auto;
+  }
+  
+  .field {
+    width : calc(50% - 20px);
+    height: 80px;
+    float: left;
+    margin-right: 10px;
+  }
+
+}
