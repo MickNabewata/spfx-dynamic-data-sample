@@ -39,8 +39,8 @@ Simple web part that showes a selected dynamic data as string value.
 ![simpleStringViewer](https://cdn-ak.f.st-hatena.com/images/fotolife/m/micknabewata/20190703/20190703155337.png "simpleStringViewer")
   
 This web part uses PropertyPaneDynamicFieldSet.  
-  
 So you should choice one of the field when the dynamic data provides a object value.  
+  
 ![simpleStringViewer](https://cdn-ak.f.st-hatena.com/images/fotolife/m/micknabewata/20190703/20190703155340.png "simpleStringViewer")
 
 #### customObjectViewer
