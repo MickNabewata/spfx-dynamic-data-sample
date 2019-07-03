@@ -32,14 +32,6 @@ export default class CustomObjectViewerWebPart extends BaseClientSideWebPart<ICu
     ReactDom.unmountComponentAtNode(this.domElement);
   }
 
-  /** 動的データを初期化 */
-  protected initDynamicData() {
-    if (!this.dynamicData) {
-      this.dynamicData = new DynamicProperty<any>(this.context.dynamicDataProvider, this.render);
-      this.dynamicData.register(this.render);
-    }
-  }
-
   /** 動的データの変更を捕まえるリスナーを登録 */
   protected registerDynamicDataReference() {
     if (this.properties.dynamicDataSource
@@ -47,11 +39,18 @@ export default class CustomObjectViewerWebPart extends BaseClientSideWebPart<ICu
       && this.properties.dynamicDataProperty
       && this.properties.dynamicDataProperty.length > 0)
     {
-      this.initDynamicData();
+      // 当クラスのフィールドに持っている動的プロパティの初期化（1回だけ）
+      if (!this.dynamicData) {
+        this.dynamicData = new DynamicProperty<any>(this.context.dynamicDataProvider, this.render);
+        this.dynamicData.register(this.render);
+      }
+
+      // 動的プロパティの関連付けを設定（都度）
       this.dynamicData.setReference(`${this.properties.dynamicDataSource}:${this.properties.dynamicDataProperty}`);
     }
     else
     {
+      // 情報が足りない場合には登録解除を行う
       this.unregisterDynamicDataReference();
     }
   }
